@@ -4,9 +4,9 @@
 Keyword=ST7Workspace-V0.7
 
 [Project0]
-Filename=fat39\fat39_lm.stp
+Filename=fat39\fat39.stp
 Dependencies=
 [Options]
-ActiveProject=fat32_LM
+ActiveProject=fat39
 ActiveConfig=Debug
 AddSortedElements=0

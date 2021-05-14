@@ -50,8 +50,8 @@ crtsi0.sm8
 
 # Object files list - section reserved for STVD
 #<BEGIN OBJECT_FILES>
-Debug\cmd.o
 Debug\main.o
+Debug\cmd.o
 #<END OBJECT_FILES>
 
 
