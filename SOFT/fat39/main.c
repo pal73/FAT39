@@ -89,6 +89,7 @@ void rele_drv(void)
 if(rele_stat_bell_cnt) 
 	{
 	rele_stat_bell_cnt--;
+	if(rele_stat_bell_cnt==0)rele_stat_enable_cnt=300;
 	GPIOD->ODR|=(1<<4);
 	}
 else GPIOD->ODR&=~(1<<4);
@@ -96,9 +97,9 @@ else GPIOD->ODR&=~(1<<4);
 if(rele_stat_enable_cnt) 
 	{
 	rele_stat_enable_cnt--;
-	GPIOD->ODR|=(1<<5);
+	GPIOB->ODR&=~(1<<5);
 	}
-else GPIOD->ODR&=~(1<<5);
+else GPIOB->ODR|=(1<<5);
 
 }
 
@@ -317,6 +318,9 @@ void gpio_init(void){
 	GPIOC->CR1&=~(1<<4);
 	GPIOC->CR2&=~(1<<4);
 	
+	GPIOB->DDR|=(1<<5);
+	GPIOB->CR1|=(1<<5);
+	GPIOB->CR2&=~(1<<5);
 	
 
 }
@@ -399,12 +403,12 @@ if(but_block_cnt)but_on_drv_cnt=0;
 if((((GPIOC->IDR)&(1<<4))) && (but_on_drv_cnt<100)) 
 	{
 	but_on_drv_cnt++;
-	if((but_on_drv_cnt>2)&&(bRELEASE))
+	if((but_on_drv_cnt>10)&&(bRELEASE))
 		{
 		bRELEASE=0;
 		bSTART=1;
-		rele_stat_bell_cnt=30;
-		rele_stat_enable_cnt=300;
+		if((!rele_stat_bell_cnt) && (!rele_stat_enable_cnt))	rele_stat_bell_cnt=30;
+		
 		}
 	}
 else 

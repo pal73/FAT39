@@ -1220,7 +1220,7 @@ TIM4_PSCR_RESET_VALUE	..\include\stm8s.h	939;"	macro
 TIM4_SR1_RESET_VALUE	..\include\stm8s.h	936;"	macro
 TIM4_SR1_UIF	..\include\stm8s.h	958;"	macro
 TIM4_TypeDef	..\include\stm8s.h	928;"	typedef	typeref:struct:TIM4_struct
-TIM4_UPD_Interrupt	main.c	325;"	function	signature:(void)
+TIM4_UPD_Interrupt	main.c	334;"	function	signature:(void)
 TIM4_UPD_Interrupt	main.h	7;"	prototype	signature:(void)
 TIM4_UPD_Interrupt	stm8_interrupt_vector.c	20;"	prototype	file:	signature:(void)
 TIM4_struct	..\include\stm8s.h	914;"	struct
@@ -1519,10 +1519,10 @@ UART3_SR_TC	..\include\stm8s.h	1885;"	macro
 UART3_SR_TXE	..\include\stm8s.h	1884;"	macro
 UART3_TypeDef	..\include\stm8s.h	1861;"	typedef	typeref:struct:UART3_struct
 UART3_struct	..\include\stm8s.h	1848;"	struct
-UARTRxInterrupt	main.c	452;"	function	signature:(void)
+UARTRxInterrupt	main.c	462;"	function	signature:(void)
 UARTRxInterrupt	main.h	12;"	prototype	signature:(void)
 UARTRxInterrupt	stm8_interrupt_vector.c	23;"	prototype	file:	signature:(void)
-UARTTxInterrupt	main.c	438;"	function	signature:(void)
+UARTTxInterrupt	main.c	448;"	function	signature:(void)
 UARTTxInterrupt	main.h	11;"	prototype	signature:(void)
 UARTTxInterrupt	stm8_interrupt_vector.c	22;"	prototype	file:	signature:(void)
 ValBit	..\include\stm8s.h	2533;"	macro
@@ -1566,7 +1566,7 @@ but_on_drv_cnt	main.c	28;"	variable
 control_check	main.h	26;"	prototype	signature:(char index)
 current_byte_in_buffer	main.c	30;"	variable
 current_page	main.c	30;"	variable
-delay_ms	main.c	100;"	function	signature:(short in)
+delay_ms	main.c	106;"	function	signature:(short in)
 delay_ms	main.h	6;"	prototype	signature:(short in)
 disableInterrupts	..\include\stm8s.h	2492;"	macro
 disableInterrupts	..\include\stm8s.h	2501;"	macro
@@ -1574,7 +1574,7 @@ enableInterrupts	..\include\stm8s.h	2491;"	macro
 enableInterrupts	..\include\stm8s.h	2500;"	macro
 file_lengt	main.c	31;"	variable
 file_lengt_in_pages	main.c	30;"	variable
-gpio_init	main.c	291;"	function	signature:(void)
+gpio_init	main.c	297;"	function	signature:(void)
 gpio_init	main.h	23;"	prototype	signature:(void)
 halt	..\include\stm8s.h	2498;"	macro
 halt	..\include\stm8s.h	2507;"	macro
@@ -1584,7 +1584,7 @@ interrupt_handler_t	stm8_interrupt_vector.c	5;"	typedef	file:
 interrupt_instruction	stm8_interrupt_vector.c	8;"	member	struct:interrupt_vector	file:
 interrupt_vector	stm8_interrupt_vector.c	7;"	struct	file:
 last_page	main.c	30;"	variable
-main	main.c	475;"	function
+main	main.c	485;"	function
 mdr0	main.c	29;"	variable
 mdr1	main.c	29;"	variable
 mdr2	main.c	29;"	variable
@@ -1593,7 +1593,7 @@ memory_manufacturer	main.c	39;"	variable
 nop	..\include\stm8s.h	2495;"	macro
 nop	..\include\stm8s.h	2504;"	macro
 play	main.c	43;"	variable
-putchar	main.c	218;"	function	signature:(char c)
+putchar	main.c	224;"	function	signature:(char c)
 putchar	main.h	10;"	prototype	signature:(char c)
 pwm_fade_in	main.c	36;"	variable
 rele_cnt	main.c	34;"	variable
@@ -1602,6 +1602,7 @@ rele_cnt_index	main.c	37;"	variable
 rele_drv	main.c	87;"	function	signature:(void)
 rele_drv	main.h	5;"	prototype	signature:(void)
 rele_stat_bell_cnt	main.c	51;"	variable
+rele_stat_enable_cnt	main.c	51;"	variable
 rim	..\include\stm8s.h	2493;"	macro
 rim	..\include\stm8s.h	2502;"	macro
 rx_buffer	main.c	23;"	variable
@@ -1622,9 +1623,9 @@ sc32	..\include\stm8s_type.h	32;"	typedef
 sc8	..\include\stm8s_type.h	34;"	typedef
 sim	..\include\stm8s.h	2494;"	macro
 sim	..\include\stm8s.h	2503;"	macro
-spi	main.c	280;"	function	signature:(char in)
+spi	main.c	286;"	function	signature:(char in)
 spi	main.h	21;"	prototype	signature:(char in)
-spi_init	main.c	235;"	function	signature:(void)
+spi_init	main.c	241;"	function	signature:(void)
 spi_init	main.h	22;"	prototype	signature:(void)
 t0_cnt0	main.c	18;"	variable
 t0_cnt1	main.c	18;"	variable
@@ -1644,13 +1645,13 @@ u16	..\include\stm8s_type.h	45;"	typedef
 u32	..\include\stm8s_type.h	44;"	typedef
 u8	..\include\stm8s_type.h	46;"	typedef
 uart_in	main.h	24;"	prototype	signature:(void)
-uart_in_an	main.c	212;"	function	signature:(void)
+uart_in_an	main.c	218;"	function	signature:(void)
 uart_in_an	main.h	27;"	prototype	signature:(void)
-uart_init	main.c	114;"	function	signature:(void)
+uart_init	main.c	120;"	function	signature:(void)
 uart_init	main.h	13;"	prototype	signature:(void)
-uart_out	main.c	133;"	function	signature:(char num,char data0,char data1,char data2,char data3,char data4,char data5)
+uart_out	main.c	139;"	function	signature:(char num,char data0,char data1,char data2,char data3,char data4,char data5)
 uart_out	main.h	8;"	prototype	signature:(char num,char data0,char data1,char data2,char data3,char data4,char data5)
-uart_out_adr_block	main.c	163;"	function	signature:(unsigned long adress,char *ptr, char len)
+uart_out_adr_block	main.c	169;"	function	signature:(unsigned long adress,char *ptr, char len)
 uart_out_adr_block	main.h	9;"	prototype	signature:(unsigned long adress,char *ptr, char len)
 uc16	..\include\stm8s_type.h	49;"	typedef
 uc32	..\include\stm8s_type.h	48;"	typedef
